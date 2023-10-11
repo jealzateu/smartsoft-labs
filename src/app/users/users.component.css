@@ -1,0 +1,22 @@
+.table-header {
+    background-color: #1FA3B5;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.table-header h1 {
+    text-align: left;
+    font-size: 18px;
+}
+
+.table-header button {
+    margin-left: auto;
+}
+
+mat-header-cell {
+    color: #1FA3B5;
+    font-weight: bold;
+}
+  

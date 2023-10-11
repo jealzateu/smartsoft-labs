@@ -1,0 +1,26 @@
+mat-sidenav-container {
+    position: inherit !important;
+}
+
+mat-sidenav {
+    width: 10%;
+    background-color: #333;
+}
+
+mat-sidenav a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #1FA3B5;
+    font-size: 24px;
+}
+
+mat-sidenav a:hover {
+    background-color: #555;
+}
+
+mat-sidenav-content {
+    padding: 20px;
+}
+
+  

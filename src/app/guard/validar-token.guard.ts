@@ -10,7 +10,6 @@ export class ValidarTokenGuard implements CanActivate {
 
   canActivate() {
     const token = localStorage.getItem('token');
-    console.info(token);
     if (!token) {
       this.router.navigateByUrl('/login');
       return false;

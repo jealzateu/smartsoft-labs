@@ -1,0 +1,36 @@
+<div class="table-header">
+    <h1 class="px-4 py-2">Users</h1>
+  
+    <button mat-icon-button (click)="addUser()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+<mat-table [dataSource]="dataSource" class="w-full border-collapse border border-gray-300">
+
+    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+        <mat-header-cell *matHeaderCellDef class="px-4 py-2">{{ column | titlecase }}</mat-header-cell>
+        <mat-cell *matCellDef="let user" class="px-4 py-2">
+            <ng-container [ngSwitch]="column">
+                <ng-container *ngSwitchCase="'Actions'">
+                    <button mat-icon-button color="primary" aria-label="Edit user" (click)="editUser(user)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="warn" aria-label="Delete user" (click)="deleteUser(user.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </ng-container>
+                <ng-container *ngSwitchDefault>
+                    {{ user[column] }}
+                </ng-container>
+            </ng-container>
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns" class="bg-blue-500 text-white"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns" class="border-t border-gray-300"></mat-row>
+
+</mat-table>
+
+<mat-paginator [length]="usersLength" [pageSize]="5" [pageSizeOptions]="[5, 10]"></mat-paginator>

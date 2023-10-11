@@ -32,7 +32,7 @@ mat-card-title {
 }
 .custom-button:disabled {
     opacity: 0.5;
-  }
+}
 
 .text-error {
     font-size: 12px;

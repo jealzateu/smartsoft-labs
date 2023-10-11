@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
 
     this.form = this.formBuilder.group({
@@ -30,10 +32,10 @@ export class LoginComponent implements OnInit {
     const response = this.authService.login(username, password);
     if (response.error) {
       this.invalidCredentials = response.error;
-      console.error(response.error)
+      console.error(response.error);
     } else {
       this.invalidCredentials = '';
-      console.log(response);
+      this.router.navigate(['/dashboard/users']);
     }
   }
 
