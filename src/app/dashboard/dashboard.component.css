@@ -3,7 +3,7 @@ mat-sidenav-container {
 }
 
 mat-sidenav {
-    width: 10%;
+    width: 12%;
     background-color: #333;
 }
 
@@ -12,7 +12,7 @@ mat-sidenav a {
     padding: 10px 20px;
     text-decoration: none;
     color: #1FA3B5;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 mat-sidenav a:hover {

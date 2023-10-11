@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { UserDialogComponent } from './users/user-dialog/user-dialog.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CovidDeathsUSComponent } from './covid-deaths-us/covid-deaths-us.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     UsersComponent,
     UserDialogComponent,
-    DashboardComponent
+    DashboardComponent,
+    CovidDeathsUSComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+<div class="container">
+    <input type="file" (change)="handleFileInput($event)" accept=".csv">
+    <div *ngIf="maxDeathsState && minDeathsState" class="result-container">
+        <h2>Estado con mayor acumulado a la fecha: {{ maxDeathsState }} - {{ maxDeathCountByState }}</h2>
+        <h2>Estado con menor acumulado a la fecha: {{ minDeathsState }} - {{ minDeathCountByState }}</h2>
+    </div>
+  </div>
+  
